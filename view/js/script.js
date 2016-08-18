@@ -3,8 +3,7 @@ var lnStickyNavigation;
 $(document).ready(function()
 {	
 	applyHeader();
-	applyNavigation(); 
-	applyMailTo();
+	applyNavigation();
 	applyResize();
 	checkHash();
 	checkBrowser();
@@ -96,20 +95,6 @@ function stickyNavigation()
 	{  
 		$('body').removeClass('fixed');   
 	}  
-}
-
-/* MAILTO FUNCTION */
-
-function applyMailTo()
-{
-	$('a[href*=mailto]').on('click', function(e)
-	{
-		var lstrEmail = $(this).attr('href').replace('mailto:', '');
-		
-		lstrEmail = lstrEmail.split('').reverse().join('')
-		
-		$(this).attr('href', 'mailto:' + lstrEmail);
-	});
 }
 
 /* RESIZE FUNCTION */
